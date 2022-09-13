@@ -1,8 +1,6 @@
 # NLW ESports
 
 
-## Geral
-* **Vite:** - ```npm create vite@latest``` -  converter code para ser entendido pelo navegador
 
 ## Server
 * ```npm init -y```
@@ -11,3 +9,10 @@
 * ```npx tsc --init```
 * ```npm i -D @types/express```
 * ```npm i -D ts-node-dev```
+
+## Web
+* **Vite:** - ```npm create vite@latest``` -  converter code para ser entendido pelo navegador
+
+# Mobile
+* **expo** - ```npm install -g expo-cli```- Criar o projeto e visualizar pelo celular
+* ```expo init mobile```
