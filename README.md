@@ -26,6 +26,7 @@ content: [
 @tailwind components;
 @tailwind utilities;
 ```
+* **Phosphor-react** - ```npm i phosphor-react```
 
 # Mobile
 * **expo** - ```npm install -g expo-cli```- Criar o projeto e visualizar pelo celular
