@@ -31,3 +31,7 @@ content: [
 # Mobile
 * **expo** - ```npm install -g expo-cli```- Criar o projeto e visualizar pelo celular
 * ```expo init mobile```
+* ```expo install expo-font @expo-google-fonts/inter```
+* ```expo install react-native-screens react-native-safe-area-context ```
+* ```expo install expo-linear-gradient```
+* 
