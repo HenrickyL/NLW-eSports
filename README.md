@@ -9,7 +9,17 @@
 * ```npx tsc --init```
 * ```npm i -D @types/express```
 * ```npm i -D ts-node-dev```
-
+* ```npm i -D prisma```
+* ```npx prisma init --datasource-provider sqlite```
+* ```npx prisma migrate dev```
+  * add name
+* ```npx prisma studio``` - visualizar os dados
+* **Schema:**
+  * `@id`
+  * `game Game @relation(fields: [gameId], references: [id])`
+  * `Ad Ad[]`
+  
+  
 ## Web
 * **Vite:** - ```npm create vite@latest``` -  converter code para ser entendido pelo navegador
 * ```npm install -D tailwindcss postcss autoprefixer```
