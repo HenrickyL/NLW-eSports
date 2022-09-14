@@ -18,7 +18,10 @@
   * `@id`
   * `game Game @relation(fields: [gameId], references: [id])`
   * `Ad Ad[]`
-  
+* `npm i @prisma/client`
+* **Validation:** Zod js (inserir depois)
+* `npm i cors`
+* `npm i -D @types/cors`
   
 ## Web
 * **Vite:** - ```npm create vite@latest``` -  converter code para ser entendido pelo navegador
