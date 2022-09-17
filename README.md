@@ -51,4 +51,7 @@ content: [
 * ```expo install expo-font @expo-google-fonts/inter```
 * ```expo install react-native-screens react-native-safe-area-context ```
 * ```expo install expo-linear-gradient```
-* 
+* **React Navigation:** navegação entre paginas
+  * `npm i @react-navigation/native`
+  * `npm i @react-navigation/native-stack`
+  * 
