@@ -40,6 +40,10 @@ content: [
 @tailwind utilities;
 ```
 * **Phosphor-react** - ```npm i phosphor-react```
+* **Componentes acessiveis:**
+  * headless.ui
+  * radix
+    * `npm i @radix-ui/react-dialog` 
 
 # Mobile
 * **expo** - ```npm install -g expo-cli```- Criar o projeto e visualizar pelo celular
