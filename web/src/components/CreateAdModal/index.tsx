@@ -1,5 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import * as Checkbox from '@radix-ui/react-checkbox'
+import * as ToggleGroup from '@radix-ui/react-toggle-group'
 import {Check, GameController} from 'phosphor-react'
 import { Input }  from '../Input'
 import { Field } from '../Field'
@@ -11,6 +12,7 @@ import { useEffect, useState } from 'react'
 
 export const CreateAdModal = ()=>{
     var [games, setGames] = useState<IGame[]>([])
+    var [weekDays, setWeekDays] = useState<string[]>([])
     useEffect(()=>{
       fetch('http://localhost:3333/games')
         .then(res=> res.json())
@@ -32,14 +34,14 @@ export const CreateAdModal = ()=>{
                                 <label htmlFor='game' className='font-semibold'>Qual o game?</label>
                                 <select 
                                     className='bg-zinc-900 py-3 px-4 rounded text-sm placeholder:text-zinc-500 appearance-none'
-                                    id='game' 
+                                    id='game'
+                                    defaultValue=''
                                 >
                                     <option
-                                        selected 
                                         disabled 
                                         value="">Selecione o game que deseja jogar</option>
                                         {games.map(game=>(
-                                            <option value={game.id}>{game.title}</option>
+                                            <option key={game.id} value={game.id}>{game.title}</option>
                                         ))}
                                 </select>
                                 
@@ -61,17 +63,23 @@ export const CreateAdModal = ()=>{
                             <FieldGroup className='gap-6'>
                                 <Field>
                                     <label htmlFor="weekDays">Quando costuma jogar?</label>
-                                    <div className='grid grid-cols-4 gap-1'>
-                                        {WeekDays.map(day=>(
-                                            <button
-                                                type='button'
-                                                className='w-8 h-8 rounded bg-zinc-900'
-                                                title={day.title}
-                                            >
-                                                {day.label}
-                                            </button>
-                                        ))}
-                                    </div>
+                                    <ToggleGroup.Root 
+                                        className='grid grid-cols-4 gap-1'
+                                        type='multiple'
+                                        onValueChange={setWeekDays}
+                                        value={weekDays}
+                                    >
+                                            {WeekDays.map(day=>(
+                                                <ToggleGroup.Item
+                                                    key={day.id}
+                                                    value={day.id}
+                                                    className={`w-8 h-8 rounded ${weekDays.includes(day.id)?'bg-violet-500':'bg-zinc-900'}`}
+                                                    title={day.title}
+                                                >
+                                                    {day.label}
+                                                </ToggleGroup.Item>
+                                            ))}
+                                    </ToggleGroup.Root>
                                 </Field>
                                 <Field flex1>
                                     <label htmlFor="hourStart">Qual horário do dia?</label>

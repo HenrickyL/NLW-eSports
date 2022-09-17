@@ -1,5 +1,5 @@
 interface WeekDay{
-    id: number;
+    id: string;
     label: string;
     title: string
 }
@@ -7,7 +7,7 @@ export const createWeekDays = ()=>{
     let week = ['Domingo', 'Segunda', 'Terça','Quarta','Quinta', 'Sexta', 'Sábado']
     return week.map<WeekDay>((day,i)=>(
         {
-            id:i,
+            id:`${i}`,
             label: day[0],
             title:day
         }
