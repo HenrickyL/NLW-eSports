@@ -54,4 +54,5 @@ content: [
 * **React Navigation:** navegação entre paginas
   * `npm i @react-navigation/native`
   * `npm i @react-navigation/native-stack`
-  * 
+* `npm i --save phosphor-react-native`
+* `npx expo install react-native-svg`

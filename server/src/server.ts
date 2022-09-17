@@ -72,6 +72,7 @@ app.get('/games/:id/ads',async (req, res)=>{
             name:true,
             weekDays:true,
             gameId:true,
+            yearsPlaying:true,
             hourStart:true,
             hourEnd:true,
             useVoiceChannel:true,
