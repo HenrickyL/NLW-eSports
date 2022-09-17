@@ -56,7 +56,7 @@ export function Game() {
           data={duos}
           horizontal
           style={styles.containerList}
-          contentContainerStyle={[styles.contentList, duos.length ===0 && styles.emptyListContent]}
+          contentContainerStyle={ duos.length ===0 ?styles.contentList : styles.emptyListContent}
           showsHorizontalScrollIndicator={false}
           keyExtractor={item=>item.id}
           ListEmptyComponent={()=>(
