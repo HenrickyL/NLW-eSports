@@ -44,6 +44,8 @@ content: [
   * headless.ui
   * radix
     * `npm i @radix-ui/react-dialog` 
+    * `npm i @radix-ui/react-checkbox`
+    * `npm i @radix-ui/react-select` (removed)
 
 # Mobile
 * **expo** - ```npm install -g expo-cli```- Criar o projeto e visualizar pelo celular

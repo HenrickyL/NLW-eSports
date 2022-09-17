@@ -1,9 +1,11 @@
 import "./styles/main.css"
 // @ts-ignore
 import logoImg from './assets/logo-nlw-esports.svg'
+import * as Dialog from '@radix-ui/react-dialog'
 import GameCard, { IGame } from "./components/GameCard"
 import { CreateAdBanner } from "./components/CreateAdBanner"
 import { useEffect, useState } from "react"
+import { CreateAdModal } from "./components/CreateAdModal"
 
 function App() {
   var [games, setGames] = useState<IGame[]>([])
@@ -25,7 +27,12 @@ function App() {
           <GameCard key={game.id} data={game}/>
         ))}
       </div>
-      <CreateAdBanner />
+      <Dialog.Root>
+        <CreateAdBanner />
+        <CreateAdModal />
+      </Dialog.Root>
+
+
 
     </div>
   )
