@@ -6,14 +6,17 @@ import GameCard, { IGame } from "./components/GameCard"
 import { CreateAdBanner } from "./components/CreateAdBanner"
 import { useEffect, useState } from "react"
 import { CreateAdModal } from "./components/CreateAdModal"
-
+import axios from "axios"
+import {useKeenSlider} from 'keen-slider/react'
+import {ArrowArcLeft as Left, ArrowArcRight  as Right} from 'phosphor-react'
+import "keen-slider/keen-slider.min.css"
 function App() {
   var [games, setGames] = useState<IGame[]>([])
+  const [sliderRef, instanceRef] = useKeenSlider()
   useEffect(()=>{
-    fetch('http://localhost:3333/games')
-      .then(res=> res.json())
-      .then(data => {
-        setGames(data)
+    axios('http://localhost:3333/games')
+      .then(res => {
+        setGames(res.data)
       })
   },[])
   return (
@@ -22,7 +25,7 @@ function App() {
       <h1 className="text-6xl text-white font-black mt-20">
         Seu <span className="text-transparent bg-nlw-gradient bg-clip-text">duo</span> está aqui</h1>
 
-      <div className="grid grid-cols-6 gap-6 mt-16">
+      <div ref={sliderRef} className="keen-slider grid grid-cols-6 gap-6 mt-16">
         {games.map((game)=>(
           <GameCard key={game.id} data={game}/>
         ))}

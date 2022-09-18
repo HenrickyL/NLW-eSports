@@ -47,6 +47,9 @@ content: [
     * `npm i @radix-ui/react-checkbox`
     * `npm i @radix-ui/react-select` (removed)
     * `npm i @radix-ui/react-toggle-group`
+* `npm i axios`
+* **Keen-Slider:** Carrosel
+  * `npm install keen-slider`
 
 # Mobile
 * **expo** - ```npm install -g expo-cli```- Criar o projeto e visualizar pelo celular
